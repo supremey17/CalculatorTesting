@@ -1,11 +1,32 @@
 package edu.secourse;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Calculator {
-    static void main(String[] args) {
-        Calculator calculator = new Calculator();
-
-
-        }
+    public static double add(double a, double b) {
+        return a + b;
     }
+
+    public static double multiply(double a, double b) {
+        return a * b;
+    }
+    public static double subtract(double a, double b){
+        return a - b;
+    }
+
+    public static double divide(double a, double b) {
+        if (b == 0) {
+            throw new ArithmeticException("Divide by zero") ;
+        }
+        return a / b;
+
+    }
+    public static double sqrt(double a) {
+        if (a == 0) {
+            throw new ArithmeticException("Cannot take square root of zero.");
+        }
+        if (a < 0){
+            throw new ArithmeticException("Cannot take square root of negative.");
+        }
+        return Math.sqrt(a);
+    }
+
+}
